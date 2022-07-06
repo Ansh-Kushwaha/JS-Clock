@@ -12,49 +12,24 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgb(36, 34, 37);
+    background-image: url("images\Day.png");
+    background-size: cover;
+
 }
 
 .clock{
     position: relative;
     color: rgb(120, 117, 117);
-    background: #1a1c1a;
+    background: rgba(254, 254, 254, 0.2);
     width: 450px;
+    height: 450px;
     padding: 25px 45px;
     box-shadow: 0 5px 25px rgba(22, 21, 22, 0.7);
-    border-radius: 5px;
+    border-radius: 1000%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-
-.clock:before{
-    content: '';
-    position: absolute;
-    background: linear-gradient(45deg, rgb(239, 96, 8), rgb(61, 22, 128));
-    background-size: 200% 200%;
-    top: -7px;
-    bottom: -7px;
-    left: -7px;
-    right: -7px;
-    z-index: -1;
-    filter: blur(40px);
-    animation: glowing 15s ease infinite;
-}
-
-@keyframes glowing{
-    0%{
-        background-position: 0 50%;
-    }
-
-    50%{
-        background-position: 100% 50%;
-    }
-
-    100%{
-        background-position: 0 50%;
-    }
 }
 
 .time{
@@ -107,7 +82,7 @@ body{
     font-size: 1.0em;
     font-weight: 600;
     transform: translateY(-19px);
-    background: -webkit-linear-gradient(45deg, rgb(227, 219, 219), rgb(73, 73, 72));
+    background: -webkit-linear-gradient(45deg, rgb(160, 154, 154), rgb(73, 73, 72));
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }

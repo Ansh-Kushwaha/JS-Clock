@@ -39,5 +39,5 @@ function getDate(){
     document.querySelector(".day").innerHTML = day;
 }
 
-var update = setInterval(getTime, 1000);
-var update = setInterval(getDate, 1000);
+var updateTime = setInterval(getTime, 1000);
+var updateDate = setInterval(getDate, 1000);
