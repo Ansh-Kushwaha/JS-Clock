@@ -42,25 +42,25 @@ function getDate(){
 function StyleChange(){
     var today = new Date();
     hour = today.getHours();
-    if(hour>=00 && hour<=05){
+    if(hour>=00 && hour<05){
         document.body.style.backgroundImage = "url(Midnight.png)";
     }
-    else if(hour>05 && hour<=07){
+    else if(hour>=05 && hour<07){
         document.body.style.backgroundImage = "url(Sunrise.png)";
     }
-    else if(hour>07 && hour<=12){
+    else if(hour>=07 && hour<12){
         document.body.style.backgroundImage = "url(Day.png)";
     }
-    else if(hour>12 && hour<=16){
+    else if(hour>=12 && hour<16){
         document.body.style.backgroundImage = "url(Afternoon.png)";
     }
-    else if(hour>16 && hour<=17){
+    else if(hour>=16 && hour<17){
         document.body.style.backgroundImage = "url(Evening.png)";
     }
-    else if(hour>17 && hour<=19){
+    else if(hour>=17 && hour<19){
         document.body.style.backgroundImage = "url(Sunset.png)";
     }
-    else if(hour>19 && hour<=24){
+    else if(hour>=19 && hour<=24){
         document.body.style.backgroundImage = "url(Night.png)";
     }
 
