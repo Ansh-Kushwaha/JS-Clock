@@ -12,6 +12,11 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    background: no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     background-image: url("Sunrise.png");
     background-size: cover;
 
