@@ -10,7 +10,9 @@ function getTime(){
     if(hours>=12){
         period = "PM";
     }
-
+    //The colon & div
+    document.querySelector(".colon").innerHTML = ":";
+    document.querySelector(".div").innerHTML = "|"; 
     //Set to 12-hour formet
     hours = hours > 12 ? hours%12 : hours;
 
@@ -43,32 +45,25 @@ function StyleChange(){
     var today = new Date();
     hour = today.getHours();
     if(hour>=00 && hour<05){
-        document.body.style.backgroundImage = "url(Midnight.png)";
+        document.body.style.backgroundImage = "url('Midnight.png')";
     }
     else if(hour>=05 && hour<07){
-        document.body.style.backgroundImage = "url(Sunrise.png)";
+        document.body.style.backgroundImage = "url('Sunrise.png')";
     }
     else if(hour>=07 && hour<12){
-        document.body.style.backgroundImage = "url(Day.png)";
+        document.body.style.backgroundImage = "url('Day.png')";
     }
     else if(hour>=12 && hour<16){
-        document.body.style.backgroundImage = "url(Afternoon.png)";
+        document.body.style.backgroundImage = "url('Afternoon.png')";
     }
     else if(hour>=16 && hour<17){
-        document.body.style.backgroundImage = "url(Evening.png)";
+        document.body.style.backgroundImage = "url('Evening.png')";
     }
     else if(hour>=17 && hour<19){
-        document.body.style.backgroundImage = "url(Sunset.png)";
+        document.body.style.backgroundImage = "url('Sunset.png')";
     }
-    else if(hour>=19 && hour<=24){
-        document.body.style.backgroundImage = "url(Night.png)";
-    }
-
-    if(hour>05 && hour<=17){
-        document.getElementById("hours").style = "";
-    }
-    else if(hour>17 && hour<=05){
-        document.getElementById("hours").style = "";
+    else if(hour>=19 && hour<24){
+        document.body.style.backgroundImage = "url('Night.png')";
     }
 }
 
