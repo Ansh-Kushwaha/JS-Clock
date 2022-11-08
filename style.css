@@ -12,7 +12,12 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('Sunrise.png');
+    background: no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-image: url("img/6To8.png");
     background-size: cover;
 
 }
@@ -21,8 +26,8 @@ body{
     position: relative;
     color: rgb(120, 117, 117);
     background: rgba(254, 254, 254, 0.2);
-    width: 380px;
-    height: 380px;
+    width: 350px;
+    height: 350px;
     padding: 25px 45px;
     box-shadow: 0 5px 25px rgba(22, 21, 22, 0.7);
     border-radius: 1000%;
@@ -53,8 +58,11 @@ body{
 }
 
 .colon{
-    color: rgb(144, 143, 143);
-    font-size: 4em;
+    transform: translateX(4px);
+    font-size: 4.5em;
+    background: -webkit-linear-gradient(45deg, rgb(55, 55, 56), rgb(27, 29, 31));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
 }
 
 .extras{
@@ -67,13 +75,13 @@ body{
 }
 
 .hours{
-    background: -webkit-linear-gradient(45deg, rgb(19, 16, 211), rgb(103, 184, 255));
+    background: -webkit-linear-gradient(45deg, rgb(55, 55, 56), rgb(27, 29, 31));
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
 
 .minutes{
-    background: -webkit-linear-gradient(45deg, rgb(229, 3, 3), rgb(255, 195, 31));
+    background: -webkit-linear-gradient(45deg, rgb(55, 55, 56), rgb(27, 29, 31));
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
@@ -81,17 +89,18 @@ body{
 .period{
     font-size: 1.0em;
     font-weight: 600;
-    transform: translateY(-19px);
-    background: -webkit-linear-gradient(45deg, rgb(160, 154, 154), rgb(73, 73, 72));
+    transform: translateY(-40px);
+    background: -webkit-linear-gradient(45deg, rgb(55, 55, 56), rgb(27, 29, 31));
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
 
 .seconds{
+    position: absolute;
     font-size: 1.8em;
     font-weight: 600;
-    transform: translateY(17px);
-    background: -webkit-linear-gradient(45deg, rgb(21, 254, 122), rgb(238, 167, 0));
+    transform: translateY(25px);
+    background: -webkit-linear-gradient(45deg, rgb(55, 55, 56), rgb(27, 29, 31));
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
@@ -103,7 +112,7 @@ body{
     font-weight: 600;
     font-size: 1.1em;
     margin-bottom: 5px;
-    background: -webkit-linear-gradient(45deg, rgb(101, 11, 86), rgb(255, 10, 100));
+    background: -webkit-linear-gradient(45deg, rgb(55, 55, 56), rgb(27, 29, 31));
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
