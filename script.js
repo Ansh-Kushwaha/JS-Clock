@@ -10,7 +10,9 @@ function getTime(){
     if(hours>=12){
         period = "PM";
     }
-
+    //The colon & div
+    document.querySelector(".colon").innerHTML = ":";
+    document.querySelector(".div").innerHTML = "|"; 
     //Set to 12-hour formet
     hours = hours > 12 ? hours%12 : hours;
 
@@ -42,33 +44,38 @@ function getDate(){
 function StyleChange(){
     var today = new Date();
     hour = today.getHours();
-    if(hour>=00 && hour<05){
-        document.body.style.backgroundImage = "url(Midnight.png)";
+    if(hour>=00 && hour<04){
+        document.body.style.backgroundImage = "url('img/24To4.png')";
     }
-    else if(hour>=05 && hour<07){
-        document.body.style.backgroundImage = "url(Sunrise.png)";
+    else if(hour>=04 && hour<06){
+        document.body.style.backgroundImage = "url('img/4To6.png')";
     }
-    else if(hour>=07 && hour<12){
-        document.body.style.backgroundImage = "url(Day.png)";
+    else if(hour>=06 && hour<08){
+        document.body.style.backgroundImage = "url('img/6To8.png')";
     }
-    else if(hour>=12 && hour<16){
-        document.body.style.backgroundImage = "url(Afternoon.png)";
+    else if(hour>=08 && hour<10){
+        document.body.style.backgroundImage = "url('img/8To10.png')";
     }
-    else if(hour>=16 && hour<17){
-        document.body.style.backgroundImage = "url(Evening.png)";
+    else if(hour>=10 && hour<12){
+        document.body.style.backgroundImage = "url('img/10To12.png')";
     }
-    else if(hour>=17 && hour<19){
-        document.body.style.backgroundImage = "url(Sunset.png)";
+    else if(hour>=12 && hour<14){
+        document.body.style.backgroundImage = "url('img/12To14.png')";
     }
-    else if(hour>=19 && hour<=24){
-        document.body.style.backgroundImage = "url(Night.png)";
+    else if(hour>=14 && hour<16){
+        document.body.style.backgroundImage = "url('img/14To16.png')";
     }
-
-    if(hour>05 && hour<=17){
-        document.getElementById("hours").style = "";
+    else if(hour>=16 && hour<18){
+        document.body.style.backgroundImage = "url('img/16To18.png')";
     }
-    else if(hour>17 && hour<=05){
-        document.getElementById("hours").style = "";
+    else if(hour>=18 && hour<20){
+        document.body.style.backgroundImage = "url('img/18To20.png')";
+    }
+    else if(hour>=20 && hour<22){
+        document.body.style.backgroundImage = "url('img/20To22.png')";
+    }
+    else if(hour>=22 && hour<24){
+        document.body.style.backgroundImage = "url('img/22To24.png')";
     }
 }
 
