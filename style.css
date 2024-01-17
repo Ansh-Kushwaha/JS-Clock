@@ -7,9 +7,10 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-body{
+body {
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background: no-repeat center center fixed;
@@ -22,7 +23,43 @@ body{
 
 }
 
-.clock{
+.toggle {
+    background: rgba(254, 254, 254, 0.2);
+    padding: 5px;
+    margin: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    border-radius: 12.5px;
+    box-shadow: 0 1px 12.5px rgba(22, 21, 22, 0.7);
+}
+
+.separator {
+    background-color: black;
+    width: 3px;
+    margin: 5px;
+    border-radius: 12.5px;
+}
+
+.selector {
+    background: none;
+    border: none;
+    border-radius: 12.5px;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 1.5em;
+}
+
+.selector:hover {
+    background: rgba(254, 254, 254, 0.2);
+}
+
+#digital {
+    display: none;
+}
+
+.clock {
     position: relative;
     color: rgb(120, 117, 117);
     background: rgba(254, 254, 254, 0.2);
@@ -37,14 +74,14 @@ body{
     flex-direction: column;
 }
 
-.time{
+.time {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;    
 }
 
-.hours, .colon, .minutes{
+.hours, .colon, .minutes {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,12 +89,12 @@ body{
     padding: 0 5px;
 }
 
-.hours, .minutes{
+.hours, .minutes {
     font-size: 6em;
     width: 125px;
 }
 
-.colon{
+.colon {
     transform: translateX(4px);
     font-size: 4.5em;
     background: -webkit-linear-gradient(45deg, rgb(55, 55, 56), rgb(27, 29, 31));
@@ -65,7 +102,7 @@ body{
     -webkit-background-clip: text;
 }
 
-.extras{
+.extras {
     position: relative;
     display: flex;
     justify-content: center;
@@ -74,19 +111,19 @@ body{
     flex-direction: column;
 }
 
-.hours{
+.hours {
     background: -webkit-linear-gradient(45deg, rgb(55, 55, 56), rgb(27, 29, 31));
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
 
-.minutes{
+.minutes {
     background: -webkit-linear-gradient(45deg, rgb(55, 55, 56), rgb(27, 29, 31));
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }
 
-.period{
+.period {
     font-size: 1.0em;
     font-weight: 600;
     transform: translateY(-40px);
@@ -95,7 +132,7 @@ body{
     -webkit-background-clip: text;
 }
 
-.seconds{
+.seconds {
     position: absolute;
     font-size: 1.8em;
     font-weight: 600;
@@ -105,7 +142,7 @@ body{
     -webkit-background-clip: text;
 }
 
-.calender{
+.calender {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -117,6 +154,61 @@ body{
     -webkit-background-clip: text;
 }
 
-.date, .month, .year, .div, .day{
+.date, .month, .year, .div, .day {
     margin-left: 7px;
 }
+
+#analog {
+    display: flex;
+}
+
+.center {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 75px;
+    width: 75px;
+    background: -webkit-linear-gradient(45deg, rgba(55, 55, 56, 0.4), rgba(27, 29, 31, 0.4));
+    border-radius: 50%;
+    box-shadow: 0 1px 12.5px rgba(22, 21, 22, 0.7);
+    z-index: 1;
+}
+
+
+.hour-hand {
+    position: absolute;
+    width: 6px;
+    height: 200px;
+    bottom: 71.5px;
+    left: 169px;
+    background: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0) 50%, rgba(27, 29, 31, 1) 50%);
+    border-radius: 25%;
+    rotate: 0deg;
+    z-index: -2;
+}
+
+.minute-hand {
+    position: absolute;
+    bottom: 22.5px;
+    left: 171.5px;
+    width: 4px;
+    height: 300px;
+    background: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0) 50%, rgba(27, 29, 31, 1) 50%);
+    border-radius: 25%;
+    rotate: 0deg;
+    z-index: -1;
+}
+
+.second-hand {
+    position: absolute;
+    width: 1.5px;
+    left: 172.5px;
+    height: 280px;
+    bottom: 32.5px;
+    background: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0) 50%, rgb(207, 26, 26) 50%);
+    border-radius: 25%;
+    rotate: 0deg;
+    z-index: 0;
+}
+

@@ -8,23 +8,38 @@
         <script src="script.js"></script>
     </head>
     <body>
+        <div class="toggle">
+            <button class="selector" onclick="changeToDig()">Digital</button>
+            <div class="separator"></div>
+            <button class="selector" onclick="changeToAna()">Analog</button>
+        </div>
         <div class="clock">
-            <div class="time">
-                <span class="hours"></span>
-                <span class="colon"></span>
-               
-                <span class="minutes"></span>
-                <div class="extras">
-                    <span class="period"></span>
-                    <span class="seconds"></span>
+            <div id="digital">
+                <div class="time">
+                    <span class="hours"></span>
+                    <span class="colon"></span>
+                
+                    <span class="minutes"></span>
+                    <div class="extras">
+                        <span class="period"></span>
+                        <span class="seconds"></span>
+                    </div>
+                </div>
+                <div class="calender">
+                    <span class="date"></span>
+                    <span class="month"></span>
+                    <span class="year"></span>
+                    <span class="div"></span>
+                    <span class="day"></span>
                 </div>
             </div>
-            <div class="calender">
-                <span class="date"></span>
-                <span class="month"></span>
-                <span class="year"></span>
-                <span class="div"></span>
-                <span class="day"></span>
+            <div id="analog">
+                <div class="center">
+                    <img src="./img/deer.png" width="50px"/>
+                </div>
+                <div class="minute-hand" id="minute-hand"></div>
+                <div class="hour-hand" id="hour-hand"></div>
+                <div class="second-hand" id="second-hand"></div>
             </div>
         </div>
     </body>
