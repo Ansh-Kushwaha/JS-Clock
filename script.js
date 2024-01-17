@@ -9,9 +9,9 @@ function getTime() {
     let secDeg = seconds * 6;
     let minDeg = minutes * 6;
     let houDeg = hours * 30 + (minutes / 2);
-    document.getElementById("hour-hand").style.transform = 'rotate(' + houDeg + 'deg)';
-    document.getElementById("minute-hand").style.transform = 'rotate(' + minDeg + 'deg)';
-    document.getElementById("second-hand").style.transform = 'rotate(' + secDeg + 'deg)';
+    document.getElementById("hour-hand").style.transform = 'translate(-50%, -50%) rotate(' + houDeg + 'deg)';
+    document.getElementById("minute-hand").style.transform = 'translate(-50%, -50%) rotate(' + minDeg + 'deg)';
+    document.getElementById("second-hand").style.transform = 'translate(-50%, -50%) rotate(' + secDeg + 'deg)';
 
 
     let period = "AM";

@@ -175,39 +175,48 @@ body {
     z-index: 1;
 }
 
+.deer {
+    fill: -webkit-linear-gradient(45deg, rgb(55, 55, 56), rgb(27, 29, 31));;
+}
 
 .hour-hand {
     position: absolute;
-    width: 6px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 1s;
+    width: 10px;
     height: 200px;
-    bottom: 71.5px;
-    left: 169px;
     background: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0) 50%, rgba(27, 29, 31, 1) 50%);
-    border-radius: 25%;
+    border-radius: 25px;
     rotate: 0deg;
     z-index: -2;
 }
 
 .minute-hand {
     position: absolute;
-    bottom: 22.5px;
-    left: 171.5px;
-    width: 4px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 1s;
+    width: 6px;
     height: 300px;
     background: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0) 50%, rgba(27, 29, 31, 1) 50%);
-    border-radius: 25%;
+    border-radius: 25px;
     rotate: 0deg;
     z-index: -1;
 }
 
 .second-hand {
     position: absolute;
-    width: 1.5px;
-    left: 172.5px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 1s;
+    width: 2px;
     height: 280px;
-    bottom: 32.5px;
     background: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0) 50%, rgb(207, 26, 26) 50%);
-    border-radius: 25%;
+    border-radius: 2.5px;
     rotate: 0deg;
     z-index: 0;
 }
