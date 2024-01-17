@@ -172,7 +172,7 @@ body {
     background: -webkit-linear-gradient(45deg, rgba(55, 55, 56, 0.4), rgba(27, 29, 31, 0.4));
     border-radius: 50%;
     box-shadow: 0 1px 12.5px rgba(22, 21, 22, 0.7);
-    z-index: 1;
+    z-index: 4;
 }
 
 .deer {
@@ -190,7 +190,7 @@ body {
     background: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0) 50%, rgba(27, 29, 31, 1) 50%);
     border-radius: 25px;
     rotate: 0deg;
-    z-index: -2;
+    z-index: 2;
 }
 
 .minute-hand {
@@ -200,11 +200,11 @@ body {
     transform: translate(-50%, -50%);
     transition: 1s;
     width: 6px;
-    height: 300px;
+    height: 280px;
     background: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0) 50%, rgba(27, 29, 31, 1) 50%);
     border-radius: 25px;
     rotate: 0deg;
-    z-index: -1;
+    z-index: 1;
 }
 
 .second-hand {
@@ -212,12 +212,45 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    transition: 1s;
+    /* transition: 1s; */
     width: 2px;
     height: 280px;
     background: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 0) 50%, rgb(207, 26, 26) 50%);
     border-radius: 2.5px;
     rotate: 0deg;
+    z-index: 3;
+}
+
+.h-12, .h-1, .h-2, .h-3, .h-6, .h-9 {
+    position: absolute;
+    font-size: 2em;
+    font-weight: bold;
+    background: -webkit-linear-gradient(45deg, rgb(55, 55, 56), rgb(27, 29, 31));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
     z-index: 0;
 }
 
+.h-12 {
+    left: 50%;
+    top: 5%;
+    transform: translateX(-50%);
+}
+
+.h-3 {
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.h-6 {
+    left: 50%;
+    bottom: 5%;
+    transform: translateX(-50%);
+}
+
+.h-9 {
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
